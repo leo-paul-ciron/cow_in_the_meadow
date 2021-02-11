@@ -3,7 +3,11 @@ using System.Collections.Generic;
 using System.Text;
 
 namespace ProjetTutorerTest
-{
+{   /*
+        Class Prairie, cette class se construit à partir d'un tableau de piquet représentant tout les piquets de la prairie,
+        les attributs sont en private car on a nullement les besoin pour le moment de faire appel au attribut en dehors de la class
+        on implement la methode ToString ainsi que la fonction AirPrairie qui retourne l'air de la prairie
+     */
     public class Prairie
     {
         private int m_nbPiquet;
@@ -17,9 +21,9 @@ namespace ProjetTutorerTest
         {
             get { return m_tabPiquet[0].Ordonner; }
         }
-        public Prairie(int p_nbPiquet, Piquet[] p_tabPiquet)
+        public Prairie( Piquet[] p_tabPiquet)
         {
-            m_nbPiquet = p_nbPiquet;
+            m_nbPiquet = p_tabPiquet.Length;
             m_tabPiquet = p_tabPiquet;
         }
 

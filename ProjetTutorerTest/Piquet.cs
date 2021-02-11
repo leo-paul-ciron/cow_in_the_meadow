@@ -3,7 +3,13 @@ using System.Collections.Generic;
 using System.Text;
 
 namespace ProjetTutorerTest
-{
+{   
+    /*
+        class Piquet, l'objet se construit à partir d'une ordonnée et d'une abscise ainsi que d'un id
+        les attribut sont en private mais on définit la propriété get l'ordonnée et l'absice pour pouvoir
+        les utilisés dans le programme. Cette class n'implémente aucune fonction.
+
+     */
      public class Piquet
     {
         private double m_ordonner;
