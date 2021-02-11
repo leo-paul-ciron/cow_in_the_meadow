@@ -1,0 +1,13 @@
+C:\Users\leopa\source\repos\ProjetTutorerTest\ProjetTutorerTest\bin\Debug\netcoreapp3.1\ProjetTutorerTest.exe
+C:\Users\leopa\source\repos\ProjetTutorerTest\ProjetTutorerTest\bin\Debug\netcoreapp3.1\ProjetTutorerTest.deps.json
+C:\Users\leopa\source\repos\ProjetTutorerTest\ProjetTutorerTest\bin\Debug\netcoreapp3.1\ProjetTutorerTest.runtimeconfig.json
+C:\Users\leopa\source\repos\ProjetTutorerTest\ProjetTutorerTest\bin\Debug\netcoreapp3.1\ProjetTutorerTest.runtimeconfig.dev.json
+C:\Users\leopa\source\repos\ProjetTutorerTest\ProjetTutorerTest\bin\Debug\netcoreapp3.1\ProjetTutorerTest.dll
+C:\Users\leopa\source\repos\ProjetTutorerTest\ProjetTutorerTest\bin\Debug\netcoreapp3.1\ProjetTutorerTest.pdb
+C:\Users\leopa\source\repos\ProjetTutorerTest\ProjetTutorerTest\obj\Debug\netcoreapp3.1\ProjetTutorerTest.csprojAssemblyReference.cache
+C:\Users\leopa\source\repos\ProjetTutorerTest\ProjetTutorerTest\obj\Debug\netcoreapp3.1\ProjetTutorerTest.AssemblyInfoInputs.cache
+C:\Users\leopa\source\repos\ProjetTutorerTest\ProjetTutorerTest\obj\Debug\netcoreapp3.1\ProjetTutorerTest.AssemblyInfo.cs
+C:\Users\leopa\source\repos\ProjetTutorerTest\ProjetTutorerTest\obj\Debug\netcoreapp3.1\ProjetTutorerTest.csproj.CoreCompileInputs.cache
+C:\Users\leopa\source\repos\ProjetTutorerTest\ProjetTutorerTest\obj\Debug\netcoreapp3.1\ProjetTutorerTest.dll
+C:\Users\leopa\source\repos\ProjetTutorerTest\ProjetTutorerTest\obj\Debug\netcoreapp3.1\ProjetTutorerTest.pdb
+C:\Users\leopa\source\repos\ProjetTutorerTest\ProjetTutorerTest\obj\Debug\netcoreapp3.1\ProjetTutorerTest.genruntimeconfig.cache
