@@ -48,5 +48,35 @@ namespace ProjetTutorerTest
 
             return aire;
         }
+
+        public double CentreGraviteAbscisse(double airePrairie)
+        {
+            double somme = 0;
+
+            for (int idx = 0; idx < m_nbPiquet - 1; idx++)
+            {
+                somme += (m_tabPiquet[idx].Abscisse + m_tabPiquet[idx + 1].Abscisse) * (m_tabPiquet[idx].Abscisse * m_tabPiquet[idx+1].Ordonner - m_tabPiquet[idx + 1].Abscisse * m_tabPiquet[idx].Ordonner);
+                
+            }
+            somme += (m_tabPiquet[m_nbPiquet-1].Abscisse + m_tabPiquet[0].Abscisse)*(m_tabPiquet[m_nbPiquet-1].Abscisse*m_tabPiquet[0].Ordonner - m_tabPiquet[0].Abscisse*m_tabPiquet[m_nbPiquet-1].Ordonner) ;
+            double AbscisseGravite = somme / (6*airePrairie);
+
+            return AbscisseGravite;
+        }
+
+        public double CentreGraviteOrdonner(double airePrairie)
+        {
+            double somme = 0;
+
+            for (int idx = 0; idx < m_nbPiquet - 1; idx++)
+            {
+                somme += (m_tabPiquet[idx].Ordonner + m_tabPiquet[idx + 1].Ordonner) * (m_tabPiquet[idx].Abscisse * m_tabPiquet[idx+1].Ordonner - m_tabPiquet[idx + 1].Abscisse * m_tabPiquet[idx].Ordonner);
+
+            }
+            somme += (m_tabPiquet[m_nbPiquet - 1].Ordonner + m_tabPiquet[0].Ordonner) * (m_tabPiquet[m_nbPiquet-1].Abscisse * m_tabPiquet[0].Ordonner - m_tabPiquet[0].Abscisse * m_tabPiquet[m_nbPiquet - 1].Ordonner);
+            double OrdonnerGravite = somme / (6*airePrairie);
+
+            return OrdonnerGravite;
+        }
     }
 }

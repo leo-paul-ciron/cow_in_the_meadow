@@ -24,8 +24,11 @@ namespace ProjetTutorerTest
 
             Prairie prairie1 = new Prairie(tabPiquet);
             double aire = prairie1.AirPrairie();
-            Console.WriteLine("L'air de la prairie est : {0}", aire);
-            
+            double aireAbsolute = Math.Abs(aire);
+            Console.WriteLine("L'air de la prairie est : {0}", aireAbsolute);
+            double AbscisseCentreGravite = prairie1.CentreGraviteAbscisse(aire);
+            double OrdonnerCentreGravite = prairie1.CentreGraviteOrdonner(aire);
+            Console.WriteLine("Le centre de gravité : {0}, {1}", AbscisseCentreGravite, OrdonnerCentreGravite);
         }
     }
 }
