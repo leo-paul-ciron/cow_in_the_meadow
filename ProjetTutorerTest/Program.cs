@@ -8,20 +8,29 @@ namespace ProjetTutorerTest
     {
         static void Main(string[] args)
         {
+            bool verif_caract = true;
             Console.WriteLine("Entrer le nombre de piquet (minimum 3)");
             string nb_piquet_string = Console.ReadLine();
-            bool verif_caract = true;
-            do
+            int nb_piquet = 0;
+            if (Regex.IsMatch(nb_piquet_string, @"^[0-9]+$") && int.Parse(nb_piquet_string) >= 3)
             {
-                Console.WriteLine("Veuillez insérez un nombre supérieur à 3 !");
-                nb_piquet_string = Console.ReadLine();
-                if (Regex.IsMatch(nb_piquet_string, @"^[0-9]+$") && int.Parse(nb_piquet_string) >= 3)
-                {
-                    verif_caract = false;
-                }
+                nb_piquet = int.Parse(nb_piquet_string);
             }
-            while (string.IsNullOrEmpty(nb_piquet_string) || verif_caract == true);
-            int nb_piquet = int.Parse(nb_piquet_string);
+            else
+            {
+                do
+                {
+                    Console.WriteLine("Veuillez insérez un nombre supérieur à 3 !");
+                    nb_piquet_string = Console.ReadLine();
+                    if (Regex.IsMatch(nb_piquet_string, @"^[0-9]+$") && int.Parse(nb_piquet_string) >= 3)
+                    {
+                        nb_piquet = int.Parse(nb_piquet_string);
+                        verif_caract = false;
+                    }
+
+                }
+                while (string.IsNullOrEmpty(nb_piquet_string) || verif_caract == true);
+            }        
             Console.WriteLine("nombre de piquet : {0}",nb_piquet);
             Piquet[] tabPiquet = new Piquet[nb_piquet];
             for (int idx = 0; idx < nb_piquet; idx++)
