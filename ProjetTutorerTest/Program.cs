@@ -6,6 +6,7 @@ namespace ProjetTutorerTest
 {
     class Program
     {
+
         static void Main(string[] args)
         {
             bool verif_caract = true;
@@ -31,15 +32,45 @@ namespace ProjetTutorerTest
                 }
                 while (string.IsNullOrEmpty(nb_piquet_string) || verif_caract == true);
             }        
-            Console.WriteLine("nombre de piquet : {0}",nb_piquet);
+            Console.WriteLine("Nombre de piquet : {0}",nb_piquet);
             Piquet[] tabPiquet = new Piquet[nb_piquet];
             for (int idx = 0; idx < nb_piquet; idx++)
             {
-                Console.WriteLine("entrer l'abscise du piquet : {0}", idx + 1);
-                double v_abscise = double.Parse(Console.ReadLine());
-                Console.WriteLine("entrer l'ordonnée du piquet : {0}", idx + 1);
-                double v_ordonner = double.Parse(Console.ReadLine());
+                Console.WriteLine("Entrer l'abscisse du piquet : {0}", idx + 1);
+                double v_abscise = 0;
+                double v_ordonner = 0;
+                bool erreur = false;
+                do
+                {
+                    try
+                    {
+                        
+                        v_abscise = double.Parse(Console.ReadLine());
+                        erreur = false;
+                    }
+                    catch
+                    {
+                        Console.WriteLine("Veuillez saisir un nombre !");
+                        erreur = true;
+                    }
 
+                } while (erreur==true);
+                Console.WriteLine("Entrer l'ordonnée du piquet : {0}", idx + 1);
+                do
+                {
+                    try
+                    {
+
+                        v_ordonner = double.Parse(Console.ReadLine());
+                        erreur = false;
+                    }
+                    catch
+                    {
+                        Console.WriteLine("Veuillez saisir un nombre !");
+                        erreur = true;
+                    }
+
+                } while (erreur == true);
                 tabPiquet[idx] = new Piquet(v_abscise, v_ordonner, idx+1);
             }
 
