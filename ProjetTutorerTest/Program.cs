@@ -7,7 +7,7 @@ namespace ProjetTutorerTest
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Entrer le nombre de piquet");
+            Console.WriteLine("Entrer le nombre de piquet ");
             string nb_piquet_string = Console.ReadLine();
             int nb_piquet = int.Parse(nb_piquet_string);
             Console.WriteLine("nombre de piquet {0}",nb_piquet);
