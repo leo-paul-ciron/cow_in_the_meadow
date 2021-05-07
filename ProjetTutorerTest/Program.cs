@@ -29,6 +29,12 @@ namespace ProjetTutorerTest
             double AbscisseCentreGravite = prairie1.CentreGraviteAbscisse(aire);
             double OrdonnerCentreGravite = prairie1.CentreGraviteOrdonner(aire);
             Console.WriteLine("Le centre de gravité : {0}, {1}", AbscisseCentreGravite, OrdonnerCentreGravite);
+            double[][] coordonnerVecteur = new double[nb_piquet - 1][];
+            coordonnerVecteur =  prairie1.CoordonneVecteur(aire);
+            Console.WriteLine("test");
+            Console.WriteLine("coordonner = {0},{1}", coordonnerVecteur[0][0], coordonnerVecteur[0][1]);
+           
+
         }
     }
 }
