@@ -7,7 +7,7 @@ namespace ProjetTutorerTest
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Entrer le nombre de piquet");
+            Console.WriteLine("Entrer le nombre de piquet ");
             string nb_piquet_string = Console.ReadLine();
             int nb_piquet = int.Parse(nb_piquet_string);
             Console.WriteLine("nombre de piquet {0}",nb_piquet);
@@ -29,6 +29,12 @@ namespace ProjetTutorerTest
             double AbscisseCentreGravite = prairie1.CentreGraviteAbscisse(aire);
             double OrdonnerCentreGravite = prairie1.CentreGraviteOrdonner(aire);
             Console.WriteLine("Le centre de gravité : {0}, {1}", AbscisseCentreGravite, OrdonnerCentreGravite);
+            double[][] coordonnerVecteur = new double[nb_piquet - 1][];
+            coordonnerVecteur =  prairie1.CoordonneVecteur(aire);
+            Console.WriteLine("test");
+            Console.WriteLine("coordonner = {0},{1}", coordonnerVecteur[0][0], coordonnerVecteur[0][1]);
+           
+
         }
     }
 }
