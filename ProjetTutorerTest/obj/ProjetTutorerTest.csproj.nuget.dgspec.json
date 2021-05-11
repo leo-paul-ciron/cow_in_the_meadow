@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\leopa\\source\\repos\\Projet_Tutore\\ProjetTutorerTest\\ProjetTutorerTest.csproj": {}
+    "C:\\Users\\leopa\\source\\repos\\ProjetTutorerTest\\Projet_Tutore\\ProjetTutorerTest\\ProjetTutorerTest.csproj": {}
   },
   "projects": {
-    "C:\\Users\\leopa\\source\\repos\\Projet_Tutore\\ProjetTutorerTest\\ProjetTutorerTest.csproj": {
+    "C:\\Users\\leopa\\source\\repos\\ProjetTutorerTest\\Projet_Tutore\\ProjetTutorerTest\\ProjetTutorerTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\leopa\\source\\repos\\Projet_Tutore\\ProjetTutorerTest\\ProjetTutorerTest.csproj",
+        "projectUniqueName": "C:\\Users\\leopa\\source\\repos\\ProjetTutorerTest\\Projet_Tutore\\ProjetTutorerTest\\ProjetTutorerTest.csproj",
         "projectName": "ProjetTutorerTest",
-        "projectPath": "C:\\Users\\leopa\\source\\repos\\Projet_Tutore\\ProjetTutorerTest\\ProjetTutorerTest.csproj",
+        "projectPath": "C:\\Users\\leopa\\source\\repos\\ProjetTutorerTest\\Projet_Tutore\\ProjetTutorerTest\\ProjetTutorerTest.csproj",
         "packagesPath": "C:\\Users\\leopa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\leopa\\source\\repos\\Projet_Tutore\\ProjetTutorerTest\\obj\\",
+        "outputPath": "C:\\Users\\leopa\\source\\repos\\ProjetTutorerTest\\Projet_Tutore\\ProjetTutorerTest\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"

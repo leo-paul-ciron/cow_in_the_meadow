@@ -13,6 +13,10 @@ namespace ProjetTutorerTest
         private int m_nbPiquet;
 
         private double[][] m_coordonnerTab;
+        
+        private double[] m_produitScalaire;
+        private double[] m_norme;
+        private double[] m_determinant;
         public int NbPiquet
         {
             get { return m_nbPiquet; }
@@ -112,80 +116,98 @@ namespace ProjetTutorerTest
             return Ordonner;
         }
 
-        public double[][]  CoordonneVecteur(double airPrairie)
+        public void  CoordonneVecteur(double airPrairie)
         {
 
             double abscisseGravite = CentreGraviteAbscisse(airPrairie);
             double ordonnerGravite = CentreGraviteOrdonner(airPrairie);
+            Console.WriteLine("absisse = {0}", abscisseGravite);
+            Console.WriteLine("ordonner ={0}", ordonnerGravite);
+            m_coordonnerTab = new double[m_nbPiquet][];
 
-            m_coordonnerTab = new double[m_nbPiquet-1][];
-
-            for (int idx = 0; idx < m_nbPiquet-1; idx++)
+            for (int idx = 0; idx < m_nbPiquet; idx++)
             {
-                m_coordonnerTab[idx] = new double[1];
+                m_coordonnerTab[idx] = new double[2];
                 m_coordonnerTab[idx][0] = m_tabPiquet[idx].Abscisse - abscisseGravite;
                 m_coordonnerTab[idx][1] = m_tabPiquet[idx].Ordonner - ordonnerGravite;
-
-                
+                Console.WriteLine("coordonne = {0}, {1}", m_coordonnerTab[idx][0], m_coordonnerTab[idx][1]);
+              
             }
-
-            return m_coordonnerTab;
+            
+           
 
         }
 
-        public double[] ProduitScalaire()
+        public void ProduitScalaire()
         {
-            double[] produitScalaire = new double[m_nbPiquet - 1];
+             m_produitScalaire = new double[m_nbPiquet];
             
             for (int idx = 0; idx < m_nbPiquet-1; idx++)
             {
-                produitScalaire[idx] = m_coordonnerTab[idx][0] * m_coordonnerTab[idx + 1][0] + m_coordonnerTab[idx][1] * m_coordonnerTab[idx + 1][1];
+                if (idx == m_nbPiquet-1)
+                {
+                    m_produitScalaire[idx] = m_coordonnerTab[idx][0] * m_coordonnerTab[0][0] + m_coordonnerTab[idx][1] * m_coordonnerTab[0][1];
+                }
+                else
+                {
+                    m_produitScalaire[idx] = m_coordonnerTab[idx][0] * m_coordonnerTab[idx + 1][0] + m_coordonnerTab[idx][1] * m_coordonnerTab[idx + 1][1];
+                }
+                
+              
             }
       
 
-            return produitScalaire;
         }
 
-        public double[] NormeVecteur()
+        public void NormeVecteur()
         {
-            double[] NormeVecteur = new double[m_nbPiquet - 1];
-            for (int idx = 0; idx < m_nbPiquet - 1; idx++)
+            m_norme = new double[m_nbPiquet ];
+            for (int idx = 0; idx < m_nbPiquet-1 ; idx++)
             {
                 double somme = Math.Pow(m_coordonnerTab[idx][1], 2) + Math.Pow(m_coordonnerTab[idx][0], 2);
-                NormeVecteur[idx] = Math.Sqrt(somme);
+                m_norme[idx] = Math.Sqrt(somme);
             }
-      
-            
 
-            return NormeVecteur;
         }
 
-        public double[] DeterminantVecteur()
+        public void DeterminantVecteur()
         {
-            double[] Determinant = new double[m_nbPiquet - 1];
+            m_determinant = new double[m_nbPiquet ];
 
-            for (int idx = 0; idx < m_nbPiquet - 1; idx++)
+            for (int idx = 0; idx < m_nbPiquet-1 ; idx++)
             {
-                Determinant[idx] = m_coordonnerTab[idx][0] * m_coordonnerTab[idx + 1][1] - m_coordonnerTab[idx][1] * m_coordonnerTab[idx +1][0];
+                m_determinant[idx] = m_coordonnerTab[idx][0] * m_coordonnerTab[idx + 1][1] - m_coordonnerTab[idx][1] * m_coordonnerTab[idx +1][0];
             }
             
 
-            return Determinant;
         }
 
-        public double[] angle()
+        public double angle()
         {
-            double[] angle = new double[m_nbPiquet-1];
-            double[] produitScalaire = new double[m_nbPiquet - 1];
-            double[] normeVecteur = new double[m_nbPiquet - 1];
-            produitScalaire = ProduitScalaire();
-            normeVecteur = NormeVecteur();
-            for (int idx = 0; idx < m_nbPiquet - 1; idx++)
+            double somme = 0;
+            double[] produitScalaire = new double[m_nbPiquet];
+            double[] normeVecteur = new double[m_nbPiquet ];
+            double[] determinant = new double[m_nbPiquet];
+            ProduitScalaire();
+            NormeVecteur();
+            DeterminantVecteur();
+            double angle;
+            for (int idx = 0; idx < m_nbPiquet-1 ; idx++)
             {
-                angle[idx] = produitScalaire[idx] / normeVecteur[idx]; 
+               
+               angle = Math.Acos(m_produitScalaire[idx] / m_norme[idx]);
+                if (m_determinant[idx]<0)
+                {
+                    angle = -angle;
+                }
+
+                somme += angle;
+              
             }
 
-            return angle;
+            return somme;
+
+          
         }
     }
 }

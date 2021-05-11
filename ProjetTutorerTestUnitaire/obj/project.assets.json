@@ -5738,11 +5738,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\leopa\\source\\repos\\Projet_Tutore\\ProjetTutorerTestUnitaire\\ProjetTutorerTestUnitaire.csproj",
+      "projectUniqueName": "C:\\Users\\leopa\\source\\repos\\ProjetTutorerTest\\Projet_Tutore\\ProjetTutorerTestUnitaire\\ProjetTutorerTestUnitaire.csproj",
       "projectName": "ProjetTutorerTestUnitaire",
-      "projectPath": "C:\\Users\\leopa\\source\\repos\\Projet_Tutore\\ProjetTutorerTestUnitaire\\ProjetTutorerTestUnitaire.csproj",
+      "projectPath": "C:\\Users\\leopa\\source\\repos\\ProjetTutorerTest\\Projet_Tutore\\ProjetTutorerTestUnitaire\\ProjetTutorerTestUnitaire.csproj",
       "packagesPath": "C:\\Users\\leopa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\leopa\\source\\repos\\Projet_Tutore\\ProjetTutorerTestUnitaire\\obj\\",
+      "outputPath": "C:\\Users\\leopa\\source\\repos\\ProjetTutorerTest\\Projet_Tutore\\ProjetTutorerTestUnitaire\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -5763,8 +5763,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\leopa\\source\\repos\\Projet_Tutore\\ProjetTutorerTest\\ProjetTutorerTest.csproj": {
-              "projectPath": "C:\\Users\\leopa\\source\\repos\\Projet_Tutore\\ProjetTutorerTest\\ProjetTutorerTest.csproj"
+            "C:\\Users\\leopa\\source\\repos\\ProjetTutorerTest\\Projet_Tutore\\ProjetTutorerTest\\ProjetTutorerTest.csproj": {
+              "projectPath": "C:\\Users\\leopa\\source\\repos\\ProjetTutorerTest\\Projet_Tutore\\ProjetTutorerTest\\ProjetTutorerTest.csproj"
             }
           }
         }
