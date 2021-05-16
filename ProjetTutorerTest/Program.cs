@@ -8,6 +8,7 @@ namespace ProjetTutorerTest
         static void Main(string[] args)
         {
             Console.WriteLine("Entrer le nombre de piquet ");
+
             string nb_piquet_string = Console.ReadLine();
             int nb_piquet = int.Parse(nb_piquet_string);
             Console.WriteLine("nombre de piquet {0}",nb_piquet);
@@ -26,12 +27,21 @@ namespace ProjetTutorerTest
             double aire = prairie1.AirPrairie();
             double aireAbsolute = Math.Abs(aire);
             Console.WriteLine("L'air de la prairie est : {0}", aireAbsolute);
-            double AbscisseCentreGravite = prairie1.CentreGraviteAbscisse(aire);
+            double AbscisseCentreGravite = prairie1.CentreGraviteAbscise(aire);
             double OrdonnerCentreGravite = prairie1.CentreGraviteOrdonner(aire);
             Console.WriteLine("Le centre de gravité : {0}, {1}", AbscisseCentreGravite, OrdonnerCentreGravite);
             prairie1.CoordonneVecteur(aire);
-            double angle = prairie1.angle();
-            Console.WriteLine("angle = {0}",angle);
+            double angle = prairie1.SommeAngles();
+
+            if (angle == 0)
+            {
+                Console.WriteLine("oh !!!!!! La vache n'est pas dans l'enclos ");
+            }
+            else
+            {
+                Console.WriteLine("Ouf !!! La vache est bien dans l'enclos");
+            }
+
            
            
 
